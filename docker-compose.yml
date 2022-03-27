@@ -3,6 +3,9 @@ version: "3.9"
 services:
   octobot:
     image: drakkarsoftware/octobot:stable
+    build:
+      context: .
+      dockerfile: Dockerfile
     labels:
       - traefik.enable=true
       - traefik.http.routers.octobot.rule=Host("${HOST}")
