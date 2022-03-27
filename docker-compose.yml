@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   octobot:
+    image: drakkarsoftware/octobot:stable
     build:
       context: .
       dockerfile: Dockerfile
