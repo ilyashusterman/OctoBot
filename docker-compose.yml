@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 services:
   octobot:
@@ -13,8 +13,8 @@ services:
        - ./backtesting:/octobot/backtesting
        - ./tentacles:/octobot/tentacles
        - ./user:/octobot/user
-    expose:
-       - ${PORT}
+    ports:
+       - 5000:5001
     restart: always
 
   traefik:
