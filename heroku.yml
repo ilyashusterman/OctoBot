@@ -1,0 +1,9 @@
+build:
+  docker:
+    octobot: Dockerfile
+release:
+  image: octobot
+  command:
+    - ./deployment-tasks.sh
+run:
+  web: "./docker-entrypoint.sh"
